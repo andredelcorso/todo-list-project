@@ -9,23 +9,27 @@
 </head>
 
 <body>
-
-    <header>
-        <h1 class="header">Lista de Tarefas</h1>
-    </header>
 <container class="container">
-    <form id="tasks">
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
+    <form class="tasks">
         <input type="text" name="task" placeholder="Nova Tarefa" class="text-input">
 
         <button type="submit" class="add_button">
-            <i class="plus_square">Adicionar</i>
+            <i class="plus_square">+</i>
         </button>
     </form>
     <div class="todo-container">
         <ul>
-            <span></span>
+            <li><span></span></li>
         </ul>
     </div>
+
+    <footer>
+        <span>Você tem 4 tarefas pendentes</span>
+        <button>Limpar tudo</button>
+    </footer>
 </container>
     <script src="todolist.js"></script>
 </body>
