@@ -7,22 +7,33 @@ inputButton.addEventListener('click', (insertevent) => {
 
     alert("Por favor, digite uma tarefa para ser adicionada à lista.");
 
-}  else if (inputText.value != "") {
+    }   else if (inputText.value != "") {
         insertevent.preventDefault();
         const add_item = document.createElement('li');
         add_item.innerHTML = inputText.value;
-        list.appendChild(add_item); 
-
+        list.appendChild(add_item);
+        
         const one_span = document.createElement ('span');
         one_span.innerHTML = 'x';
         add_item.appendChild(one_span);
     
         const erase_item = document.querySelectorAll ('span')
         for (let i = 0; i < erase_item.length; i++) {
-        erase_item[i].addEventListener('click', () => {
+            erase_item[i].addEventListener('click', () => {
             erase_item[i].parentElement.style.display = "none";
-    });
-    inputText.value = "";
+            });
+            
+        const two_span = document.createElement ('checkbox');
+        two_span.innerHTML = '✓';
+        add_item.appendChild(two_span);
+
+        const check_item = document.querySelectorAll ('checkbox')
+        for (let i = 0; i < check_item.length; i++) {
+            check_item[i].addEventListener('click', () => {
+            check_item[i].parentElement.style.textDecoration = "line-through";
+            });
+        }
     }
 }
-});
+
+    inputText.value = ""});
