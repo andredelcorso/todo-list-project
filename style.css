@@ -91,9 +91,6 @@ body {
     
 }
 
-.container .todo-container ul checkbox:checked {
-    text-decoration: line-through;
-}
 
 
 .container .todo-container li:hover span{
