@@ -6,6 +6,6 @@
     I will improve this project as better I can. Hope you enjoy!
 
     Todo-List task
-#You can run the project clicking on the link below: 
+# You can run the project clicking on the link below: 
  - https://andredelcorso.github.io/todo-list-project/
  
