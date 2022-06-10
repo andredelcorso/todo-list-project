@@ -27,21 +27,22 @@ inputButton.addEventListener('click', (insertevent) => {
         two_span.innerHTML = '✓';
         add_item.appendChild(two_span);
 
-        const uncheck_item = document.querySelectorAll ('checkbox')    
-        uncheck_item[i].addEventListener('click', () => {
-                document.getElementById("checkbox").checked = false;
-                uncheck_item[i].parentElement.style.textDecoration = "none";
-        });
-    }
-        const check_item = document.querySelectorAll ('checkbox')
+        const check_item = document.querySelectorAll ('checkbox')   
+        for (let i = 0; i < check_item.length; i++) { 
+        check_item[i].addEventListener('click', () => {
+            document.getElementById("checkbox").checked = true;
+            check_item[i].parentElement.style.textDecoration = "line-through";
+            check_item[i].parentElement.style.color = "red";
         for (let i = 0; i < check_item.length; i++) {
-            check_item[i].addEventListener('click', () => {
-                document.getElementById('checkbox').checked = true;
-                check_item[i].parentElement.style.textDecoration = "line-through";
-                check_item[i].parentElement.style.color = "red";
+        check_item[i].addEventListener('click', () => {
+            document.getElementById('checkbox').checked = false;
+            check_item[i].parentElement.style.textDecoration = "none";
+            check_item[i].parentElement.style.color = "black";
         });
-                    
     }
-}
 });
-    inputText.value = ""
+}
+        }
+    }
+
+    inputText.value = ""});
